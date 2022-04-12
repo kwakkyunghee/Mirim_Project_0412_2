@@ -3,12 +3,57 @@ package kr.hs.emirims2117.mirim_project_0412_2;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
+import android.view.View;
+import android.widget.Button;
+import android.widget.EditText;
+import android.widget.TextView;
 
 public class MainActivity extends AppCompatActivity {
-
+    EditText edit1, edit2;
+    TextView textResult;
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+        edit1=findViewById(R.id.edit1);
+        edit2=findViewById(R.id.edit2);
+        textResult=findViewById(R.id.text_result);
+
+        
+
+        int[] btnId={R.id.btn_plus,R.id.btn_Minus,R.id.btn_Multi,R.id.btn_Divide};
+        Button[] btn=new Button[btnId.length];
+        for(int i=0; i<btn.length; i++){
+            btn[i]=findViewById(btnId[i]);
+            View.OnClickListener btnListener = null;
+            btn[i].setOnClickListener(btnListener);
+        }
+        
+        View.OnClickListener btnListener =new View.OnClickListener(){
+            @Override
+            public void onClick(View view){
+                String edit1Str=edit1.getText().toString();
+                String edit2Str=edit2.getText().toString();
+                int num1=Integer.parseInt(edit1Str);
+                int num2=Integer.parseInt(edit2Str);
+                int result=0;
+                switch(view.getId()){
+                    case R.id.btn_plus:
+                        result=num1+num2;
+                        break;
+                    case R.id.btn_minus:
+                        result=num1-num2;
+                        break;
+                    case R.id.btn_multi:
+                        result=num1*num2;
+                        break;
+                    case R.id.btn_divide:
+                        result=num1/num2;
+                        break;
+                }
+                textResult.setText(R.string.text_result);
+                textResult.append(" "+result);
+            }
+        };
     }
 }
