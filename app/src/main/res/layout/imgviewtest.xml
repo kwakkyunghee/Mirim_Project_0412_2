@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+    <!--<ImageView
+        android:layout_widht="100dp"
+        android:layout_height="120dp"
+        android:background="#ffff00"
+        android:src="@drawable/dog"
+        />
+    <ImageButton
+        android:layout_width="100dp"
+        android:layout_height="120dp"
+        android:src="@drawable/dog"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitXY"
+        android:src="@drawable/dog"
+        android:background="#ffff00"
+        />
+    <ImageView
+        android:layout_width="150dp"
+        android:layout_height="150dp"
+        android:scaleType="fitCenter"
+        android:src="@drawable/dog"
+        android:background="#ffff00"
+        />-->
+    <ImageView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:adjustViewBounds="true"
+        android:src="@drawable/dog"
+        android:background="#ffff00"
+        />
+
+
+</LinearLayout>
